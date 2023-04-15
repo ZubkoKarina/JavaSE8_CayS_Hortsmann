@@ -41,8 +41,8 @@ public class HelloWorld{
 *
 * float  4 бт
 * double 8 бт (двойная точность - чаще использовать)
-* Double.POSITIVE_INFINITY
-* Double.NEGATIVE_INFINITY
-* Double.NaN (не число)
-* 
+* Double.POSITIVE_INFINITY          1.0/0.0     isInfinite()
+* Double.NEGATIVE_INFINITY          0.0/0.0     isFinite()
+* Double.NaN (не число)             sqrt(-n)    if(Double.isNaN(x))
+* СТР 32
 */
