@@ -48,9 +48,15 @@ public class HelloWorld{
 * при System.out.println(2.0-1.1) вывод 0,89999999999999999 а не 0,9
 * потому что числа с пл.точкой представлены в 2х системе счисления
 * точные расчеты -> BigDecimal
+* 
+* char 'J' = 74 = (16x)4A = "U004A LatinCaption Letter J"
+* 'J' == '\u004A' 
+* 
+* variable  => xXxx
+* class     => Xxxx
+* constant  => XXXX
 *
-*
-*
-*
-*
+* Обьявление переменной как можно позже! Прям перед использованием!
+* final int DAYS_PER_WEEK = 7;                      константа
+* public static final int DAYS_PER_WEEK = 7;        константа вне тела метода
 */
