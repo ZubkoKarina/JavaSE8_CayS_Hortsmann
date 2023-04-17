@@ -6,6 +6,7 @@
 *String = кодовые точки Юникод в UTF-16.
 */
 package ch01.sec01;
+import java.math.BigInteger;
 import java.util.Random;
 
 public class HelloWorld{
@@ -21,6 +22,13 @@ public class HelloWorld{
         System.out.println(Integer.MAX_VALUE);
 
         System.out.println(DAYS_PER_WEEK);
+
+        BigInteger n = BigInteger.valueOf(37562763528364586L);
+        BigInteger k = new BigInteger("37562763528364586");
+        BigInteger r = BigInteger.valueOf(5).multiply(n.add(k));
+        System.out.println(n);
+        System.out.println(k);
+        System.out.println(r);
     }
 }
 
@@ -87,6 +95,32 @@ public class HelloWorld{
 * ||                                            л
 * ?:                                            л
 * = += -= *= /= %= <<= >>= >>>= &= ^= |=        п
+*
+* Math.floorMod(position+adjustment, 12)        всегда значения [0;11]
+* n++   инкремент
+* n--   декремент
+*
+* (1000000000*3)                        = -1294967296 превышает int
+* Math.multiplyExact(1000000000, 3)     = исключение
+* Math.addExact() Math.subtractExact() Math.incrementExact() Math.decrementExact() Math.nagateExact()
+*
+* преоразование тепов если есть double -> double,float ->, long -> long иначе int.
+* Math.toIntExact() возращяет исключение если приведение типов прошло некорректно
+*
+* тернарный if - (time<12)?"am":"pm"
+*
+* BigInteger и BigDecimal из java.math
+* valurOf() вернет long типу BigInteger
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
 *
 *
 */
