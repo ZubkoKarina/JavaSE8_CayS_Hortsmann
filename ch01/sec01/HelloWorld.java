@@ -69,4 +69,24 @@ public class HelloWorld{
 * enum Weekday{MON, TUE, WED, THU, FRI, SAT, SUN}; 
 * состоит из Weekday.MON и тд.
 * Weekday startDay = Weekday.MON;
+* 
+* лево  ассоциативность - 3-4-5   -> (3-4)-5
+* право ассоциативность - i-=j-=k -> i-=(j-=k)
+* 
+* [].()                                         л
+* !~++--+-()new                                 п
+* * / %                                         л
+* +-                                            л
+* <<>> >>>                                      л
+* <><=>=instanceof                              л
+* == !=                                         л
+* &                                             л
+* ^                                             л
+* |                                             л
+* &&                                            л
+* ||                                            л
+* ?:                                            л
+* = += -= *= /= %= <<= >>= >>>= &= ^= |=        п
+*
+*
 */
