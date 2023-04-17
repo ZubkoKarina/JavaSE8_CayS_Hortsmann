@@ -29,6 +29,13 @@ public class HelloWorld{
         System.out.println(n);
         System.out.println(k);
         System.out.println(r);
+
+        StringBuilder builder = new StringBuilder();
+        while(builder.length()<20){
+            builder.append("IjmfmlkDNLD");
+        }
+        String result = builder.toString();
+        System.out.println(result);
     }
 }
 
@@ -112,8 +119,8 @@ public class HelloWorld{
 * BigInteger и BigDecimal из java.math
 * valurOf() вернет long типу BigInteger
 *
-*
-*
+* соединение строк с розделителем String names = String.join(",", "Peter", "Paul", "Mary");
+* или StringBuilder
 *
 *
 *
