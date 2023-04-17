@@ -9,6 +9,7 @@ package ch01.sec01;
 import java.util.Random;
 
 public class HelloWorld{
+    public static final int DAYS_PER_WEEK = 7;
     public static void main(String[] args){
         System.out.println("Hello World!");
 
@@ -18,6 +19,8 @@ public class HelloWorld{
         System.out.println(gen.nextInt());
 
         System.out.println(Integer.MAX_VALUE);
+
+        System.out.println(DAYS_PER_WEEK);
     }
 }
 
@@ -59,4 +62,11 @@ public class HelloWorld{
 * Обьявление переменной как можно позже! Прям перед использованием!
 * final int DAYS_PER_WEEK = 7;                      константа
 * public static final int DAYS_PER_WEEK = 7;        константа вне тела метода
+* в System есть "public static final PrintStream out" == "System.out"
+*
+* public static final int MONDAY  = 0;
+* public static final int TUESDAY = 1; =>
+* enum Weekday{MON, TUE, WED, THU, FRI, SAT, SUN}; 
+* состоит из Weekday.MON и тд.
+* Weekday startDay = Weekday.MON;
 */
