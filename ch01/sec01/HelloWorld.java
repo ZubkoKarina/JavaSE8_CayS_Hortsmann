@@ -8,6 +8,7 @@
 package ch01.sec01;
 import java.math.BigInteger;
 import java.util.Random;
+import java.util.Arrays;
 
 public class HelloWorld{
     public static final int DAYS_PER_WEEK = 7;
@@ -32,10 +33,11 @@ public class HelloWorld{
 
         StringBuilder builder = new StringBuilder();
         while(builder.length()<20){
-            builder.append("IjmfmlkDNLD");
+            builder.append("IjmfmlkmsDNLD");
         }
         String result = builder.toString();
-        System.out.println(result);
+        String[] arr = result.substring(1, 10).split("m");
+        System.out.println(Arrays.toString(arr)); 
     }
 }
 
@@ -122,7 +124,7 @@ public class HelloWorld{
 * соединение строк с розделителем String names = String.join(",", "Peter", "Paul", "Mary");
 * или StringBuilder
 *
-*
+* разделение строк - substring()
 *
 *
 *
