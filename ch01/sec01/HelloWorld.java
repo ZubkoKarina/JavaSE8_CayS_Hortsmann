@@ -44,5 +44,13 @@ public class HelloWorld{
 * Double.POSITIVE_INFINITY          1.0/0.0     isInfinite()
 * Double.NEGATIVE_INFINITY          0.0/0.0     isFinite()
 * Double.NaN (не число)             sqrt(-n)    if(Double.isNaN(x))
-* СТР 32
+* 
+* при System.out.println(2.0-1.1) вывод 0,89999999999999999 а не 0,9
+* потому что числа с пл.точкой представлены в 2х системе счисления
+* точные расчеты -> BigDecimal
+*
+*
+*
+*
+*
 */
