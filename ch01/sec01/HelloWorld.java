@@ -9,6 +9,7 @@ package ch01.sec01;
 import java.math.BigInteger;
 import java.util.Random;
 import java.util.Arrays;
+import java.io.Console;
 
 public class HelloWorld{
     public static final int DAYS_PER_WEEK = 7;
@@ -38,6 +39,14 @@ public class HelloWorld{
         String result = builder.toString();
         String[] arr = result.substring(1, 10).split("m");
         System.out.println(Arrays.toString(arr)); 
+        
+        String str = "Karina Zubko";
+        int[] codePoints = str.codePoints().toArray();
+        System.out.println(Arrays.toString(codePoints));
+
+        Console terminal = System.console();
+        String username = terminal.readLine("User name: ");
+        char[] passwd = terminal.readPassword("Password: ");
     }
 }
 
@@ -125,8 +134,12 @@ public class HelloWorld{
 * или StringBuilder
 *
 * разделение строк - substring()
+* стравнние строк  - equals() или equalsIgnoreCase()
 *
+* не использовать Scanner для пароля(видно в терминале) использовать Console
 *
+* java mypackage.MainClass<input.txt>output.txt 
+* данные читаються в поток System.in из файла imput.txt в output.txt из потока System.out
 *
 *
 *
