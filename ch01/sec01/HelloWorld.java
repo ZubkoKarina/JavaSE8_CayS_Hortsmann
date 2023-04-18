@@ -43,6 +43,13 @@ public class HelloWorld{
         for (String name : names) {
             System.out.println(name);
         }
+        System.out.println(average(2, 5, 6, 4, 3, 5, 8.7));
+
+    }
+    public static double average(double... values){
+        double sum = 0;
+        for(double value: values) sum += value;
+        return values.length == 0 ? 0:sum/values.length;
     }
 }
 
@@ -220,21 +227,9 @@ public class HelloWorld{
 * многомерные списочные масивы - не предусмотрены:
 * ArrayList<ArrayList<Integer>> и тд.
 *
+* массив может передаваться как параметр и в return new int[]{};
+* можно указать параметр переменной длины с многоточием: public static void average(double... values);
 *
-*
-*
-*
-*
-*
-*
-*
-*
-*
-*
-чем отличаеться массив с 0 длиной и масив с елементами null стр 59 по книжке?
-ArrayList<>(); что будет если во вторих ромбах укажу другой тип
-почему нельзядля обобщенных класов использовать примитивные типы 
-*
-*
-*
+* int[] empyArray = new int[0];     длина ноль
+* int[] nullArray = null;           без элементов 
 */
