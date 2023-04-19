@@ -8,7 +8,7 @@ public class Task_2 {
         int num = in.nextInt();
         int normalizedNumber = num%360;
         if (normalizedNumber<0){
-            normalizedNumber *= (-1);
+            normalizedNumber += 360;
         }
         System.out.println(normalizedNumber);
         normalizedNumber = Math.floorMod(num, 360);
