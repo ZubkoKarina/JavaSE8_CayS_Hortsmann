@@ -18,5 +18,18 @@ public class Task_7{
             System.out.println("[0;65535]");
             secondNum = in.nextBigInteger();
         }
+        short shortFirstNum = firstNum.shortValue();
+        short shortSecondNum = secondNum.shortValue();
+        short sum = (short)(shortFirstNum+shortSecondNum);
+        short diff = (short)(shortFirstNum-shortSecondNum); 
+        short prod = (short)(shortFirstNum*shortSecondNum);
+        if(shortSecondNum == 0)System.out.println("by zero!");
+        else {
+            short quitient = (short)(shortFirstNum/shortSecondNum);
+        }
+        if(shortSecondNum == 0)System.out.println("by zero!");
+        else {
+            short remainder = (short)(shortFirstNum%shortSecondNum);
+        }
     }
 }
