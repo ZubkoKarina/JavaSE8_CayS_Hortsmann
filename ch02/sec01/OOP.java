@@ -83,8 +83,23 @@ public class OOP{
 * java -classpath .:../libs/\* com.mycompany.MainClass
 * установка пути: export CLASSPASH=.:/home/username/project/libs/\*
 * в windows: SET SLASSPATH=.;C:\Users\username\progect\libs\*
+* область видимости пакета:
+* private        - только в том классе, в котором обьявлен
+* public         - в любом классе
+* не указано     - только в одном пакете 
+* ClassLoader - изоляция классов которые неизменны в java
+* если необходима защита своих пакетов ->  размещение в геометричном архивном JAR-файле,
+* и предоставить манифест - текстовый файл с таких содержанием как : 
+* Name: com/mycompany/util/
+* Seales: true
+* ...
+* затем выполнить: jar cvfm library.jar manifest.txt com/mycompany/*(тут ничего, просто коментарии слетают)/*.class
+* 
+* import java.* - импорт всех классов но не всех пакетов
+* оператор import в java не приводик к компиляции этих классы(как в C++), а лишь сокращает имена классов
 *
-*
+* Статический импорт: import static java.lang.Math.*; 
+* и далее доступно использование стас. методов таким образом:pow(y,2) а не Math.pow()
 *
 *
 */
