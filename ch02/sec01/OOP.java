@@ -57,7 +57,8 @@ public class OOP{
 * Если случайно обьявить void public void Employee(...)- не конструктор, а метод!
 *
 * Переменная экземпляра класса final - обязана быть инициализирована к концу определения каждого конструктора
-* но private fienl ArrayList<Person> friends = new ArrayList<>() - неизменяема только ссылка, а изменять обьект можно(можно изменять содержимое массива, но они не могут заменить ссылку)
+* но private fienl ArrayList<Person> friends = new ArrayList<>() - неизменяема только ссылка, а изменять 
+* обьект можно(можно изменять содержимое массива, но они не могут заменить ссылку)
 *
 * Static поле  - единственное в классе, принадлежит только классу а не экземпляру обьекта
 * Static final - например double Pi = ...;
@@ -70,7 +71,18 @@ public class OOP{
 * Пакет по умолчанию - при не указания пакета(не рекомендуется)
 * javac -d ... - файлы классов формируються в отдельном каталоге
 *
+* JAR: jar cvf library.jar com/mycompany/*.class 
+* jar cvfe program.jar com.mycompany.MainClass com/mycompany/*.class
+* и тогда выполнение: java -jar program.jar
 *
+* утилиты javac и java имеют параметр -classpath(-cp)
+* тек.каталог(.) и два jar-файла в каталоге ../libs
+* java -classpath .:../libs/lib1.jar:../libs/lib2.jar com.mycompany.MainClass
+* в windows: java -classpath .;../libs/lib1.jar;../libs/lib2.jar com.mycompany.MainClass
+* если есть много jar-файлов - разместить в одном каталоге:
+* java -classpath .:../libs/\* com.mycompany.MainClass
+* установка пути: export CLASSPASH=.:/home/username/project/libs/\*
+* в windows: SET SLASSPATH=.;C:\Users\username\progect\libs\*
 *
 *
 *
