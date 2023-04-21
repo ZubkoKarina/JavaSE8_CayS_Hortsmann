@@ -20,8 +20,14 @@ public class OOP{
             this.salary = salary;
         }
         public Employee(double salary){
-            this("", name);
-            this.salary = salary;
+            // this.name = "";
+            // this.salary = salary;
+            this("", salary);
+        }
+        public Employee(String name){
+            // для обьектов будет вызывать исключение в getName()
+            // salary = 0;
+            this.name = name;
         }
         public void raiseSalary(double byPercent){
             double raise = salary * byPercent/100;
