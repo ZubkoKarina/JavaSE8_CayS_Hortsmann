@@ -1,6 +1,7 @@
 package ch02.sec01;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class OOP{
     public static void main(String[] args){
@@ -13,8 +14,13 @@ public class OOP{
         staff.add(new Employee("Karina", 10000));
     }
     public static class Employee{
-        private String name;
-        private double salary;
+        private final String name;
+        private double salary = 500.0;
+        //блок инициализации(обычно не используются)
+        {
+            Random generator = new Random();
+            salary = 1+generator.nextInt(1_000_000);
+        }
         public Employee(String name, double salary){
             this.name = name;
             this.salary = salary;
@@ -50,7 +56,7 @@ public class OOP{
 *
 * Если случайно обьявить void public void Employee(...)- не конструктор, а метод!
 *
-*
-*
+* Переменная экземпляра класса final - обязана быть инициализирована к концу определения каждого конструктора
+* но private fienl ArrayList<Person> friends = new ArrayList<>() - неизменяема только ссылка, а изменять обьект можно(можно изменять содержимое массива, но они не могут заменить ссылку)
 */
 
