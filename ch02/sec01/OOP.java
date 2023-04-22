@@ -200,7 +200,7 @@ public class OOP{
             this.name = name;
             this.salary = salary;
         }*/
-    }/* 
+    /*} 
     public class Network{
         public class Member{
             private String name;
@@ -213,8 +213,8 @@ public class OOP{
         }
         private ArrayList<Member> members;
         //...
-    }*/
-}
+    }
+}*/
 
 /*
 * утилита javadoc обрабатывает исходный код в HTML-файлы 
