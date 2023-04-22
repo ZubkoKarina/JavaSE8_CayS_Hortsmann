@@ -47,7 +47,7 @@ public class OOP{
             this.name = name;
             this.salary = salary;
         }*/
-    }
+    }/* 
     public class Network{
         public class Member{
             private String name;
@@ -60,7 +60,7 @@ public class OOP{
         }
         private ArrayList<Member> members;
         //...
-    }
+    }*/
 }
 
 /*
@@ -95,7 +95,7 @@ public class OOP{
 * если есть много jar-файлов - разместить в одном каталоге:
 * java -classpath .:../libs/\* com.mycompany.MainClass
 * установка пути: export CLASSPASH=.:/home/username/project/libs/\*
-* в windows: SET SLASSPATH=.;C:\Users\username\progect\libs\*
+* в windows: SET SLASSPATH=.;C:\Users\(тут пусто, комментарии слетают)username\progect\libs\*
 * область видимости пакета:
 * private        - только в том классе, в котором обьявлен
 * public         - в любом классе
@@ -121,6 +121,23 @@ public class OOP{
 * outer - скрытая ссылка на обьемлеющий класс, дает ссылку только для внутренних классов
 * в стас. класс отсуцтвует outer и this ссылки
 *
+* Правила специального синтаксиса для внутренних классов:
+* внешнийКласс.this. ... и так далее
+* public class Network{
+*    public class Member{
+*        //...
+*        public boolean belongdTo(Network n){
+*           return Network.this == n;
+*       }
+*    }
+* }
+* Member newMember = new Member(name); тоже самое:
+* Member newMember = this.new Member(name);
+* Network.Member wilma = myFace.new Member("Karina") вызов конструктора внутреннего класса
+*
+* Утилита Javadoc - авто. составление HTML документации из исходных файлов
+*
 *
 */
+
 
