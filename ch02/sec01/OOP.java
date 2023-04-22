@@ -48,6 +48,19 @@ public class OOP{
             this.salary = salary;
         }*/
     }
+    public class Network{
+        public class Member{
+            private String name;
+            private ArrayList<Member> friends;
+            public Mamber(String name){
+                this.name = name;
+                this.friends = new ArrayList<>();
+                //...
+            }
+        }
+        private ArrayList<Member> members;
+        //...
+    }
 }
 
 /*
