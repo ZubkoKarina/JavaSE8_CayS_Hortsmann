@@ -3,7 +3,7 @@ package ch03.sec01;
 import java.util.function.Function;
 
 public class LambdaExoression{
-    /*public interface IntSequence{
+    public interface IntSequence{
         boolean hasNext();
         //если int next() не имеет реализации - есть абстракным
         //если класс реализует только некоторые из методов инерфейса, он должен быть abstract
@@ -27,7 +27,7 @@ public class LambdaExoression{
             i++;
             return i*i;
         }
-    }*/
+    }
     public static void main(String[] args){
         String str = "Hello, world!";
         // создаем ссылку на метод length() класса String
@@ -39,8 +39,8 @@ public class LambdaExoression{
         Supplier<String> stringSupplier = String::new;
         // вызываем конструктор через ссылку
         String newString = stringSupplier.get(); 
-        //SquareSequence squares = new SquareSequence(); //fix
-        //double avg = average(squares, 100);    //fix
+        SquareSequence squares = new SquareSequence();
+        double avg = average(squares, 100);  
     }
 }
 
@@ -158,7 +158,9 @@ public class LambdaExoression{
 * 
 * Функциональные интерфейсы: 
 * Лямбда-выражения можно предоставить всякий раз, когда ожидается обьект класса, реализующего нтерфейс с единсвенным абстракным методом.
-*
+* Такой интерфейс называется функциональным.
+* Arrays.sort(words,
+*       (first, second) -> first.length() - second.length());
 *
 *
 *
