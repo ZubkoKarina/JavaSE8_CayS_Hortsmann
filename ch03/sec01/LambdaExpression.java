@@ -1,6 +1,6 @@
 package ch03.sec01;
-
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class LambdaExpression{
     public interface IntSequence{
@@ -31,16 +31,17 @@ public class LambdaExpression{
     public static void main(String[] args){
         String str = "Hello, world!";
         // создаем ссылку на метод length() класса String
-        Function<String, Integer> strLenghFunction = String::length;
+        Function<String, Integer> strLengthFunction = String::length;
         // вызываем метод length() через ссылку
-        int strLength = strLengthFunc.apply(str); 
+        int strLength = strLengthFunction.apply(str); 
         // Пример ссылки на конструктор
         // создаем ссылку на конструктор класса String
         Supplier<String> stringSupplier = String::new;
         // вызываем конструктор через ссылку
-        String newString = stringSupplier.get(); 
-        SquareSequence squares = new SquareSequence();
-        double avg = average(squares, 100);  
+        LambdaExpression obj = new LambdaExpression();
+        IntSequence squares = obj.new SquareSequence();
+        double avg = average(squares, 100);
+        System.out.println(avg);
     }
 }
 
