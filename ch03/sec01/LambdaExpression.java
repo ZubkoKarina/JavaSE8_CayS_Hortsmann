@@ -2,7 +2,7 @@ package ch03.sec01;
 
 import java.util.function.Function;
 
-public class LambdaExoression{
+public class LambdaExpression{
     public interface IntSequence{
         boolean hasNext();
         //если int next() не имеет реализации - есть абстракным
