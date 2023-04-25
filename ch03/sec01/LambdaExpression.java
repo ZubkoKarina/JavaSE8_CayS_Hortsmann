@@ -180,7 +180,15 @@ public class LambdaExpression{
 *   Класс  :: СтатическийМетод              пример: Objects::isNull
 *   Обьект :: МетодЭкземпляра               пример: System.out::println
 *
+* Ссылка на конструкторы:
+* Employee::new     - ссылка на конструктор Employee
 *
+* List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+* List<Integer> lengths = names.stream()
+*                               .map(String::length)
+*                               .collect(Collectors.toList());
+* System.out.println(lengths);                                  // Выведет [5, 3, 7]
+* 
 *
 *
 *
