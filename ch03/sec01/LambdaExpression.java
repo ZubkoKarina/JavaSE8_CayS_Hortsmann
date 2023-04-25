@@ -155,11 +155,16 @@ public class LambdaExoression{
 * EventHandler<ActionEvent> listener = event -> 
 *   System.out.println("Oh, noes!");
 *       //вместо выражения (event)-> или (ActionEvent event)-> 
+* 
+* Функциональные интерфейсы: 
+* 
 *
 *
 *
 *
 *
 *
-не понимаю код на странице 120 по книжке
+*
+*
+*
 */
