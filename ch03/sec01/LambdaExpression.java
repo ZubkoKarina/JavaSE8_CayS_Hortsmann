@@ -169,7 +169,16 @@ public class LambdaExpression{
 * например сортирование строк независсимо от регистра букв:
 * Array.sort(string, (x, y)->x.compareToIgnoreCase(y)); но можно так:
 * Array.sort(String, String::compareToIgnoreCase); - это ссылка на метод 
+* А тут из списка удаляются все пустые значения:
+* list.removeIf(Objects::isNull);
+* Еще примеры:
+* list.forEach(x->System.out.println(x)); это тоже самое что и: 
+* list.forEach(System.out::println);
 *
+* Операция :: отделяет имя метода от имени класса или обьекта:
+*   Класс  :: МетодЭкземпляра               пример: String::compareToIgnoreCase
+*   Класс  :: СтатическийМетод              пример: Objects::isNull
+*   Обьект :: МетодЭкземпляра               пример: System.out::println
 *
 *
 *
