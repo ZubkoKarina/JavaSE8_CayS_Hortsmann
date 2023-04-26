@@ -211,15 +211,26 @@ public class LambdaExpression{
 * - выполнения кода при наступлении события
 * - выполнения кода только по мере надобности
 *
-*
-*
-*
-*
-*
-*
-*
-*
-*
+* Вызов функционального интерфейса:
+* номинальная питизация - система типо, с совместимостью имен типов,  ане на структуре и их свойствах.
+* Наиболее употребляемые функциональные интерфейсы:
+* ФИ                    Параметры       Возвращаемое значение    Имя абстрактного метода    Описание                                Другие методы
+* Runnable              Нет             void                     run()                      Выполняет дейсвие без аргументов        Нет
+* Supplier<T>           Нет             T                        get()                      Возвращает значение типа T              Нет
+* Consumer<T>           T               void                     accept(T)                  Выполняет действие с аргументом T       andThen(Consumer<? super T> after)
+* BiConsumer<T, U>      T, U            void                     accept(T, U)               Выполняет действие с аргументами T и U  andThen(BiConsumer<? super T, ? super U> after)
+* Function<T, R>        T               R                        apply(T)                   Функция с аргументом T                  andThen(Function<? super R, ? extends V> after)
+*                                                                                                                                   compose(Function<? super V, ? extends T> before)        
+*                                                                                                                                   identity()
+* BiFunction<T, U, R>   T, U           R                        apply(T, U)                Функция с аргументами T и U              andThen(Function<? super R, ? extends V> after)
+* UnaryOperator<T>      T              T                        apply(T)                   Унарная операция над T                   identity()
+*                                                                                                                                   andThen(UnaryOperator<T> after) 
+*                                                                                                                                   compose(UnaryOperator<T> before)
+* BinaryOperator<T>     T, T           T                        apply(T, T)                Бинарная операция над T                  maxBy(Comparator<? super T> comparator)
+*                                                                                                                                   minBy(Comparator<? super T> comparator)
+*                                                                                                                                   andThen(BinaryOperator<T> after)
+* Predicate<T>          T              boolean                  test(T)                    Проверяет свойство T                     isEqual(Object targetRef), end(), or(), negate(), test(Object t)
+* BiPredicate<T, U>     T, U           boolean                  test(T, U)                 Проверяет свойство T и U                 and(BiPredicate<? super T, ? super U> other), negate(), or()                           
 *
 *
 *
