@@ -28,6 +28,12 @@ public class LambdaExpression{
             return i*i;
         }
     }
+    public interface IntConsumer{
+        void accept(int value);
+    }
+    public static void repeat(int n, IntConsumer action){
+        for(int i = 0; i < n; i++) action.accept(i);
+    }
     public static void main(String[] args){
         String str = "Hello, world!";
         // создаем ссылку на метод length() класса String
@@ -42,6 +48,7 @@ public class LambdaExpression{
         IntSequence squares = obj.new SquareSequence();
         double avg = average(squares, 100);
         System.out.println(avg);
+        repeat(100, i -> System.out.println("Hello, World!" + (9-i)));
     }
 }
 
@@ -195,6 +202,26 @@ public class LambdaExpression{
 * Stream<Employee> stream = names.stream().map(Employee::new);
 * Employee[] buttons = stream.toArray(Employee[]::new);
 *
-* 
+* Реализация отложенного выполнения: 
+* Лямбда-выражения применяются для отложенного выполнения
+* Причины:
+* - выполнение кода в отдельном потоке
+* - неоднократное выподненеие кода
+* - выполнения кода в нужный момент
+* - выполнения кода при наступлении события
+* - выполнения кода только по мере надобности
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
 * 
 */
