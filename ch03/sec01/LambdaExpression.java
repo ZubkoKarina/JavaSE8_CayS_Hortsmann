@@ -222,17 +222,35 @@ public class LambdaExpression{
 * Function<T, R>        T               R                        apply(T)                   Функция с аргументом T                  andThen(Function<? super R, ? extends V> after)
 *                                                                                                                                   compose(Function<? super V, ? extends T> before)        
 *                                                                                                                                   identity()
-* BiFunction<T, U, R>   T, U           R                        apply(T, U)                Функция с аргументами T и U              andThen(Function<? super R, ? extends V> after)
-* UnaryOperator<T>      T              T                        apply(T)                   Унарная операция над T                   identity()
+* BiFunction<T, U, R>   T, U           R                         apply(T, U)                Функция с аргументами T и U             andThen(Function<? super R, ? extends V> after)
+* UnaryOperator<T>      T              T                         apply(T)                   Унарная операция над T                  identity()
 *                                                                                                                                   andThen(UnaryOperator<T> after) 
 *                                                                                                                                   compose(UnaryOperator<T> before)
-* BinaryOperator<T>     T, T           T                        apply(T, T)                Бинарная операция над T                  maxBy(Comparator<? super T> comparator)
+* BinaryOperator<T>     T, T           T                         apply(T, T)                Бинарная операция над T                 maxBy(Comparator<? super T> comparator)
 *                                                                                                                                   minBy(Comparator<? super T> comparator)
 *                                                                                                                                   andThen(BinaryOperator<T> after)
-* Predicate<T>          T              boolean                  test(T)                    Проверяет свойство T                     isEqual(Object targetRef), end(), or(), negate(), test(Object t)
-* BiPredicate<T, U>     T, U           boolean                  test(T, U)                 Проверяет свойство T и U                 and(BiPredicate<? super T, ? super U> other), negate(), or()                           
+* Predicate<T>          T              boolean                   test(T)                    Проверяет свойство T                    isEqual(Object targetRef), end(), or(), negate(), test(Object t)
+* BiPredicate<T, U>     T, U           boolean                   test(T, U)                 Проверяет свойство T и U                and(BiPredicate<? super T, ? super U> other), negate(), or()                           
 *
-*
+* Реализация собсвенных функциональных интерфейсов:
+* BiFunction< Integer, Integer, Color> - подрозумевает автоупаковку
+* Целесообразно определить новый интерфейс:
+* @FunctionalInterface
+* public interface PixelFunction {
+*     Color apply(int x, int y);
+* }
+* и реализация: 
+* BufferedImage createImage(int width, int height, PixelFunction f) {
+*     BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+*     for (int x = 0; x < width; x++) {
+*         for (int y = 0; y < height; y++) {
+*             Color color = f.apply(x, y);
+*             image.setRGB(x, y, color.getRGB());
+*         }
+*     }
+*     return image;
+* }
+* вызов: BufferedImage frenchFlag = createImage(150, 100, (x, y) -> x < 50 ? Color.BLUE : x < 100 ? Color.WHITE : Color.RED);
 *
 * 
 */
