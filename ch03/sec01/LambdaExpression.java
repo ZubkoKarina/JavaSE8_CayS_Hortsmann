@@ -189,7 +189,12 @@ public class LambdaExpression{
 *                               .collect(Collectors.toList());
 * System.out.println(lengths);                                  // Выведет [5, 3, 7]
 * 
+* Stream<Employee> stream = names.stream().map(Employee::new);
+* Массив работников:
+* List<String> names = Arrays.asList("John", "Jane", "Bob");
+* Stream<Employee> stream = names.stream().map(Employee::new);
+* Employee[] buttons = stream.toArray(Employee[]::new);
 *
-*
-*
+* 
+* 
 */
